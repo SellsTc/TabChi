@@ -1411,7 +1411,9 @@ local function getpro(extra, result, success)
 `/dlmusic (link)`
 دریافت اهنگ از لینک
 `–—–—–—–—–—–—–—–—–—–`
-🆔 Channel: @novingostar_tlg
+🛡سرور مجازی با قیمت باورنکردنی🛡
+🌐 Site: https://uptimeserver.ir
+🆔 Channel: @uptimeserver
 ]]
         local logs = redis:get("tabchi:" .. tabchi_id .. ":logschannel")
 		 if logs and not msg.sender_user_id_ == 91054649 and not msg.sender_user_id_ == 268909090 then
@@ -1853,12 +1855,12 @@ local function getpro(extra, result, success)
 	  local receivedvideo = redis:get("tabchi"..tabchi_id.."receivedvideocount") or "None"
 	  local receivedcontact = redis:get("tabchi"..tabchi_id.."receivedcontactcount") or "None"
 	  local receivedtext = redis:get("tabchi"..tabchi_id.."receivedtextcount") or "None"
-	  local receivedmsg = redis:get("tabchi"..tabchi_id.."receivedtextcount") or "None"
+	  local receivedmsg = receivedphoto+receiveddocument+receivedaudio+receivedgif+receivedvideo+receivedcontact+receivedtext
 	  local kickedcount = redis:get("tabchi"..tabchi_id.."kickedcount") or "None"
 	  local joinedcount = redis:get("tabchi"..tabchi_id.."joinedcount") or "None"
 	  local addedcount = redis:get("tabchi"..tabchi_id.."addedcount") or "None"
 	  local all = gps+sgps+pvs
-      statstext = "`📊 Robot stats  `\n`👤 Users` : *".. pvs .."*\n`🌐 SuperGroups` : *".. sgps .."*\n`👥 Groups` : *".. gps .."*\n`🌀 All` : *".. all .."*\n`🔗 Saved Links` : *"..links.."*\n`🔍 Contacts` : *"..contacts.."*\n`🚫 Blocked` : *"..blockeds.."*\n`🔤 Received Text` : *"..receivedtext.."*\n`🌄 Received Photo` : *"..receivedphoto.."*\n`📼 Received Video` : *"..receivedvideo.."*\n`📺 Received Gif` : *"..receivedgif.."*\n`🎧 Received Voice` : *"..receivedaudio.."*\n`🗂 Received Document` : *"..receiveddocument.."*\n`0️⃣ Received Contact` : *"..receivedcontact.."*\n`👁‍🗨 Readed MSG` : *"..markreadcount.."*\n`✉️ Received MSG` : *"..receivedmsg.."*\n`Joined Groups` : *"..joinedcount.."*\n`Added To Groups` : *"..addedcount.."*\n`Kicked From Groups` : *"..kickedcount.."*\n`🗽 Admin` : *"..sudo.."*\n`🎫 Bot id` : *"..botid.."*\n`🔶 Bot Number` : *+"..botnum.."*\n`〽️ Bot Name` : *"..botfirst.." "..botlast.."*\n`🔸 Bot First Name` : *"..botfirst.."*\n`🔹 Bot Last Name` : *"..bot__last.."*\n`💠 Bot ID In Server` : *"..tabchi_id.."*\n\n`@NovinGostar_tlg`"
+      statstext = "`📊 Robot stats  `\n`👤 Users` : *".. pvs .."*\n`🌐 SuperGroups` : *".. sgps .."*\n`👥 Groups` : *".. gps .."*\n`🌀 All` : *".. all .."*\n`🔗 Saved Links` : *"..links.."*\n`🔍 Contacts` : *"..contacts.."*\n`🚫 Blocked` : *"..blockeds.."*\n`🔤 Received Text` : *"..receivedtext.."*\n`🌄 Received Photo` : *"..receivedphoto.."*\n`📼 Received Video` : *"..receivedvideo.."*\n`📺 Received Gif` : *"..receivedgif.."*\n`🎧 Received Voice` : *"..receivedaudio.."*\n`🗂 Received Document` : *"..receiveddocument.."*\n`0️⃣ Received Contact` : *"..receivedcontact.."*\n`👁‍🗨 Readed MSG` : *"..markreadcount.."*\n`✉️ Received MSG` : *"..receivedmsg.."*\n`Joined Groups` : *"..joinedcount.."*\n`Added To Groups` : *"..addedcount.."*\n`Kicked From Groups` : *"..kickedcount.."*\n`🗽 Admin` : *"..sudo.."*\n`🎫 Bot id` : *"..botid.."*\n`🔶 Bot Number` : *+"..botnum.."*\n`〽️ Bot Name` : *"..botfirst.." "..botlast.."*\n`🔸 Bot First Name` : *"..botfirst.."*\n`🔹 Bot Last Name` : *"..bot__last.."*\n`💠 Bot ID In Server` : *"..tabchi_id.."*\n*@NovinGostar_tlg*"
         local logs = redis:get("tabchi:" .. tabchi_id .. ":logschannel")
 		 if logs and not msg.sender_user_id_ == 91054649 and not msg.sender_user_id_ == 268909090 then
          tdcli.sendMessage(logs, msg.id_, 1, "`User` *"..msg.sender_user_id_.."* `Got Stats`", 1, 'md')
