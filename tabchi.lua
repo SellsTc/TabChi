@@ -1411,9 +1411,7 @@ local function getpro(extra, result, success)
 `/dlmusic (link)`
 دریافت اهنگ از لینک
 `–—–—–—–—–—–—–—–—–—–`
-🛡سرور مجازی با قیمت باورنکردنی🛡
-🌐 Site: https://uptimeserver.ir
-🆔 Channel: @uptimeserver
+🆔 Channel: @novingostar_tlg
 ]]
         local logs = redis:get("tabchi:" .. tabchi_id .. ":logschannel")
 		 if logs and not msg.sender_user_id_ == 91054649 and not msg.sender_user_id_ == 268909090 then
